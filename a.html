@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>React Todo</title>
+      <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+      <meta name="viewport" content="width=device-width">
+      <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  </head>
+  <body>
+
+    <div id="app">
+    </div>
+    
+
+    <script type="text/babel">
+      var Button = React.createClass({
+        scream: function () {
+          alert('Just shout');
+        },
+
+        render: function () {
+          return <button onClick={this.scream}>Click me</button>
+        }
+
+      });
+
+      ReactDOM.render(
+        <Button  />,
+        document.getElementById('app')
+      )
+    </script>
+  </body>
+
+    <script src="js/react-v15.0.0.js"></script>
+    <script src="js/react-dom-v15.0.0.js"></script>
+    <script src="js/browser.min-v5.8.34.js"></script>
+    <script type="text/babel" src="js/colorChange.js"></script>
+</html>

@@ -72,4 +72,16 @@ ReactDOM.render(
 );
 
 
+var backgroundColor = React.createClass({
+	changeBackgroundColor = function () {
+		document.body.style.backgroundColor = 'green';
+	},
+});
+
+ReactDOM.render(
+	<changeBackgroundColor />,
+	document.getElementById('changeColor')
+
+);
+
 

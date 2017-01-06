@@ -1,7 +1,7 @@
 class Header extends React.Component {
   render() {
     return (
-      <header>Header</header>
+      <header>Header {this.props.message}</header>
     );
   }
 }
@@ -17,6 +17,7 @@ class Footer extends React.Component {
 
 class Layout extends React.Component {
   // You can use constructors, but you have to call super()
+
   constructor() {
     super();
     this.state = {name: "Ugochukwu"};
@@ -25,12 +26,13 @@ class Layout extends React.Component {
     return "Ugo";
   }
   render() {
+      const message = "Welcome my evil Lord Ugo";
     setTimeout(() => {
       this.setState({name: "Johnson"});
     }, 1000)
     return (
       <div>
-        <Header/>
+        <Header message={message}/>
         <h1>Its {this.getVal()}</h1>
         <h1>Its {this.state.name}</h1>
         <Footer/>
